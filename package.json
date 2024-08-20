@@ -1,6 +1,6 @@
 {
   "name": "sol-dust-vacuum-sdk",
-  "version": "0.0.1003",
+  "version": "0.0.1005",
   "description": "Package to interect programatically with https://soldustvacuum.app.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

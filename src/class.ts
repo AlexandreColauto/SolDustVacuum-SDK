@@ -259,7 +259,9 @@ export class SDV {
                 const buffer = Buffer.from(i, 'base64')
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wlt])
-                const sig = await connection.simulateTransaction(tx)
+                const sig = await connection.simulateTransaction(tx, {
+                    commitment: "confirmed"
+                })
                 signatures.push(sig)
             }
         }
