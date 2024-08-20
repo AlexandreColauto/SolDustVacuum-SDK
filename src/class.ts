@@ -30,7 +30,8 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wlt])
                 const sig = await connection.sendTransaction(tx, {
-                    maxRetries: 5
+                    maxRetries: 5,
+                    preflightCommitment: "confirmed"
                 })
                 signatures.push(sig)
             }
@@ -68,7 +69,8 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wallet])
                 const sig = await connection.sendTransaction(tx, {
-                    maxRetries: 5
+                    maxRetries: 5,
+                    preflightCommitment: "confirmed"
                 })
                 signatures.push(sig)
             }
@@ -110,7 +112,8 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wallet])
                 const sig = await connection.sendTransaction(tx, {
-                    maxRetries: 5
+                    maxRetries: 5,
+                    preflightCommitment: "confirmed"
                 })
                 signatures.push(sig)
             }
@@ -138,7 +141,8 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wlt])
                 const sig = await connection.sendTransaction(tx, {
-                    maxRetries: 5
+                    maxRetries: 5,
+                    preflightCommitment: "confirmed"
                 })
                 signatures.push(sig)
             }
@@ -176,7 +180,8 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wallet])
                 const sig = await connection.sendTransaction(tx, {
-                    maxRetries: 5
+                    maxRetries: 5,
+                    preflightCommitment: "confirmed"
                 })
                 signatures.push(sig)
             }
@@ -219,7 +224,8 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wallet])
                 const sig = await connection.sendTransaction(tx, {
-                    maxRetries: 5
+                    maxRetries: 5,
+                    preflightCommitment: "confirmed"
                 })
                 signatures.push(sig)
             }
