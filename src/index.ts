@@ -1,4 +1,4 @@
-export * from './soldustvacuum'
 export * from './class'
+export * from './soldustvacuum'
 
 
