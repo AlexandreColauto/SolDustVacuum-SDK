@@ -260,7 +260,7 @@ export class SDV {
                 const tx = VersionedTransaction.deserialize(buffer)
                 tx.sign([wlt])
                 const sig = await connection.simulateTransaction(tx, {
-                    commitment: "confirmed"
+                    commitment: "processed"
                 })
                 signatures.push(sig)
             }
