@@ -1,13 +1,13 @@
 # Sol Dust Vacuum SDK
 
-## Close solana accounts programatically and claim your rent in seconds, suitable for multiple of wallets, and easy to use.
+## Close solana accounts programatically and claim your rent in seconds. Suitable for multiple wallets, and easy to use.
 
 This SDK is a programatically version of the [soldustvacuum.app](https://soldustvacuum.app), a tool that helps user closing their solana account and claiming their rent back.
 With hardware wallets in mind, this SDK is designed for easy of use and to allow the user close accounts of multiple wallets at once.
 Some of the key features are:
 * No gass fee is charged, wallets with no funds can use the tool.
-* Close list of accounts or all accounts.
-* Close accounts of one or multiple wallets.
+* Close list of accounts or all accounts of a wallet.
+* Close accounts of one or multiple wallets in a single function.
 * Receive your rent of all accounts in a single address.
 * Close accounts of all wallets in a folder.
 

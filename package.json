@@ -4,7 +4,6 @@
   "description": "Package to interect programatically with https://soldustvacuum.app.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "type": "module",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
