@@ -9,7 +9,7 @@ export class SDV {
         this.apiKey = apiKey
     }
 
-    async burnTokens(wallet: Keypair | string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAccounts(wallet: Keypair | string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
@@ -39,7 +39,7 @@ export class SDV {
         return signatures
     }
     // close list of token from many wallets
-    async burnTokensBatch(wallets: Keypair[] | string[] | string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAccountsBatch(wallets: Keypair[] | string[] | string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
@@ -77,7 +77,7 @@ export class SDV {
         }
         return signatures
     }
-    async burnTokensFolder(wallets: string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAccountsFolder(wallets: string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
@@ -120,7 +120,7 @@ export class SDV {
         }
         return signatures
     }
-    async burnAllTokens(wallet: Keypair | string, tokensToKeep?: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAllAccounts(wallet: Keypair | string, tokensToKeep?: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
@@ -149,7 +149,7 @@ export class SDV {
         }
         return signatures
     }
-    async burnAllTokensBatch(wallets: Keypair[] | string[] | string, tokensToKeep?: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAllAccountsBatch(wallets: Keypair[] | string[] | string, tokensToKeep?: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
@@ -188,7 +188,7 @@ export class SDV {
         }
         return signatures
     }
-    async burnAllTokensFolder(wallets: string, tokensToKeep: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAllAccountsFolder(wallets: string, tokensToKeep: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
@@ -245,7 +245,7 @@ export class SDV {
         }
         return wlt
     }
-    async burnTokensSimulate(wallet: Keypair | string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
+    async closeAccountsSimulate(wallet: Keypair | string, tokens: string[], rpcUrl?: string, feeReceiver?: string) {
         if (!this.apiKey) {
             throw new Error("Please provide a valid API key")
         }
