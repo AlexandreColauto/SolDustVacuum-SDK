@@ -1,5 +1,5 @@
 # Sol Dust Vacuum SDK
-[![Sol Dust Vacuum SDK](https://soldustvacuum.app/public/logo.png)](https://soldustvacuum.app/)
+[![Sol Dust Vacuum SDK](public/banner.png)](https://soldustvacuum.app/)
 [![Solana](https://img.shields.io/badge/Solana-FF8E42?style=for-the-badge)](https://solana.com)
 ## Close solana accounts programatically and claim your rent in seconds. Suitable for multiple wallets, and easy to use.
 
