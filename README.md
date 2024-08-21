@@ -15,7 +15,7 @@ Some of the key features are:
 
 Attention! To close a solana account, the account must be empty. Any remaning balance on the accounts will be burned on the closing proccess. Use the tool with caution, any missuse can lead to lost of funds.
 
-The service is free. Sol Dust Vacuum only charges a small percentage on each account closed (0.0003 SOL).
+The service has no costs. Sol Dust Vacuum only charges a small percentage on each account closed (0.0003 SOL).
 
 
 
