@@ -1,5 +1,5 @@
 # Sol Dust Vacuum SDK
-
+![![Sol Dust Vacuum SDK](https://soldustvacuum.app/public/logo.png)](https://soldustvacuum.app/)
 ## Close solana accounts programatically and claim your rent in seconds. Suitable for multiple wallets, and easy to use.
 
 This SDK is a programatically version of the [soldustvacuum.app](https://soldustvacuum.app), a tool that helps user closing their solana account and claiming their rent back.
@@ -19,23 +19,30 @@ Sol Dust Vacuum charges a small percentage on each account closed (0.0003 SOL).
 
 ## Quickstart
 ### install
-`npm install sol-dust-vacuum-sdk`
-or
-`yarn add sol-dust-vacuum-sdk`
+```
+npm install sol-dust-vacuum-sdk
+
+yarn add sol-dust-vacuum-sdk
+```
 
 ### Closing solana accounts from one wallet
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); // the path to your wallet
+    // the path to your wallet
+    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
-    //const wallet = process.cwd() + "/wallet.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet = process.cwd() + "/wallet.json" 
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to close.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+        
+    // List of tokens to close.
+    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAccounts(wallet, tokens)
     console.log(signature)
@@ -44,20 +51,24 @@ main()
 
 ```
 ### Use custom RPC endpoint 
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); // the path to your wallet
+    // the path to your wallet
+    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
-    //const wallet = process.cwd() + "/wallet.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet = process.cwd() + "/wallet.json" 
 
     const RPC_URL = "<YOUR_CUSTOM_RPC_ENDPOINT>"
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to close.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+    // List of tokens to close.
+    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAccounts(wallet, tokens, RPC_URL)
     console.log(signature)
@@ -66,22 +77,27 @@ main()
 
 ```
 ### How to receive all funds in one address
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); // the path to your wallet
+    // the path to your wallet
+    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
-    //const wallet = process.cwd() + "/wallet.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet = process.cwd() + "/wallet.json" 
 
     const RPC_URL = "<YOUR_CUSTOM_RPC_ENDPOINT>"
 
     const receiver = "DUSTPnALb5327hRCfxQdzHutuxeh88J4EWaT7eqq1PWP"
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to close.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+
+    // List of tokens to close.
+    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAccounts(wallet, tokens, RPC_URL, receiver)
     console.log(signature)
@@ -91,18 +107,23 @@ main()
 ```
 ## How to use
 ### Closing solana accounts from one wallet
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); // the path to your wallet
+    // the path to your wallet
+    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
-    //const wallet = process.cwd() + "/wallet.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet = process.cwd() + "/wallet.json" 
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to close.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+
+    // List of tokens to close.
+    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAccounts(wallet, tokens)
     console.log(signature)
@@ -111,18 +132,23 @@ main()
 
 ```
 ### Closing all solana accounts from one wallet
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); // the path to your wallet
+    // the path to your wallet
+    const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
-    //const wallet = process.cwd() + "/wallet.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet = process.cwd() + "/wallet.json" 
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokensToKeep = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to keep, any other token will be closed.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+
+    // List of tokens to keep, any other token will be closed.
+    const tokensToKeep = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAllAccounts(wallet, tokensToKeep)
     console.log(signature)
@@ -131,7 +157,7 @@ main()
 
 ```
 ### Closing solana accounts from multiple wallets
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
@@ -142,11 +168,14 @@ async function main() {
     const wallet1 = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile1.toString())));
     const jsonFile2 = fs.readFileSync(cwd + "/wallet2.json", 'utf8');
     const wallet2 = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile2.toString())));
-    //const wallet1 = cwd + "/wallet1.json" // you can specify your wallet path instead
-    //const wallet2 = cwd + "/wallet2.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet1 = cwd + "/wallet1.json" 
+    //const wallet2 = cwd + "/wallet2.json" 
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to close.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+    // List of tokens to close.
+    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAccountsBatch([wallet1, wallet2], tokens)
     console.log(signature)
@@ -155,7 +184,7 @@ main()
 
 ```
 ### Closing all solana accounts from multiple wallets
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
@@ -166,13 +195,18 @@ async function main() {
     const wallet1 = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile1.toString())));
     const jsonFile2 = fs.readFileSync(cwd + "/wallet2.json", 'utf8');
     const wallet2 = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile2.toString())));
-    //const wallet1 = cwd + "/wallet1.json" // you can specify your wallet path instead
-    //const wallet2 = cwd + "/wallet2.json" // you can specify your wallet path instead
+    // you can specify your wallet path instead
+    //const wallet1 = cwd + "/wallet1.json" 
+    //const wallet2 = cwd + "/wallet2.json" 
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokensToKeep = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to keep, any other token will be closed.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
 
-    const signature = await sdv.closeAllAccountsBatch([wallet1, wallet2]) // if tokens to keep is not provided all tokens will be selected
+    // List of tokens to keep, any other token will be closed.
+    const tokensToKeep = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
+
+    // if tokens to keep is not provided all tokens will be selected
+    const signature = await sdv.closeAllAccountsBatch([wallet1, wallet2]) 
     //const signature = await sdv.closeAllAccountsBatch([wallet1, wallet2], tokensToKeep) 
     console.log(signature)
 }
@@ -180,16 +214,20 @@ main()
 
 ```
 ### Close solana accounts from all wallet in a folder
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const walletFolder = process.cwd() + "/wallets"  // will read all json wallets on the folder
+    // will read all json wallets on the folder
+    const walletFolder = process.cwd() + "/wallets"  
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to close.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+
+    // List of tokens to close.
+    const tokens = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
     const signature = await sdv.closeAccountsFolder(walletFolder, tokens) 
     console.log(signature)
@@ -198,18 +236,22 @@ main()
 
 ```
 ### Close all solana accounts from all wallet in a folder
-```
+```JS
 import { SDV } from 'sol-dust-vacuum-sdk'
 import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    const walletFolder = process.cwd() + "/wallets"  // will read all json wallets on the folder
+    // will read all json wallets on the folder
+    const walletFolder = process.cwd() + "/wallets"  
 
-    const sdv = new SDV("YOUR_API_KEY_HERE")  // Get your API key at https://soldustvacuum.app/sdk/keys
-    const tokensToKeep = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  // List of tokens to keep, any other token will be closed.
+    // Get your API key at https://soldustvacuum.app/sdk/keys
+    const sdv = new SDV("YOUR_API_KEY_HERE")  
+    // List of tokens to keep, any other token will be closed.
+    const tokensToKeep = ["rSzXH2jd6e6Mdro2MdRWHpRXA8QdZ8638AWi4fopump"]  
 
-    const signature = await sdv.closeAllAccountsFolder(walletFolder) // if tokens to keep is not provided all tokens will be selected
+    // if tokens to keep is not provided all tokens will be selected
+    const signature = await sdv.closeAllAccountsFolder(walletFolder) 
     //const signature = await sdv.closeAllAccountsFolder(walletFolder, tokensToKeep) 
     console.log(signature)
 }
