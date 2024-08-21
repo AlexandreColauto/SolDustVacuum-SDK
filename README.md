@@ -1,5 +1,6 @@
 # Sol Dust Vacuum SDK
-![![Sol Dust Vacuum SDK](https://soldustvacuum.app/public/logo.png)](https://soldustvacuum.app/)
+[![Sol Dust Vacuum SDK](https://soldustvacuum.app/public/logo.png)](https://soldustvacuum.app/)
+[![Solana](https://img.shields.io/badge/Solana-FF8E42?style=for-the-badge)](https://solana.com)
 ## Close solana accounts programatically and claim your rent in seconds. Suitable for multiple wallets, and easy to use.
 
 This SDK is a programatically version of the [soldustvacuum.app](https://soldustvacuum.app), a tool that helps user closing their solana account and claiming their rent back.
@@ -260,6 +261,5 @@ main()
 ```
 
 
-[![Solana](https://img.shields.io/badge/Solana-FF8E42?style=for-the-badge)](https://solana.com)
 
 
