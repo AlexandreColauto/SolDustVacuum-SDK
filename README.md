@@ -13,9 +13,10 @@ Some of the key features are:
 * Receive your rent of all accounts in a single address.
 * Close accounts of all wallets in a folder.
 
-Attention! To close a solana account, the account must be empty, so any remaning balance on the accounts will be burned on the closing procces. Use the tool with caution, any misuse can lead to lost of funds.
+Attention! To close a solana account, the account must be empty. Any remaning balance on the accounts will be burned on the closing proccess. Use the tool with caution, any missuse can lead to lost of funds.
 
-Sol Dust Vacuum charges a small percentage on each account closed (0.0003 SOL).
+The service is free. Sol Dust Vacuum only charges a small percentage on each account closed (0.0003 SOL).
+
 
 
 ## Quickstart
