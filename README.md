@@ -35,7 +35,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    // the path to your wallet
+    // your JSON wallet
     const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
     // you can specify your wallet path instead
@@ -60,7 +60,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    // the path to your wallet
+    // your JSON wallet
     const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
     // you can specify your wallet path instead
@@ -86,7 +86,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    // the path to your wallet
+    // your JSON wallet
     const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
     // you can specify your wallet path instead
@@ -116,7 +116,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    // the path to your wallet
+    // your JSON wallet
     const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
     // you can specify your wallet path instead
@@ -141,7 +141,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
-    // the path to your wallet
+    // your JSON wallet
     const jsonFile = fs.readFileSync(process.cwd() + "/wallet.json", 'utf8'); 
     const wallet = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile.toString())));
     // you can specify your wallet path instead
@@ -166,6 +166,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
+    // your JSON wallet
     const cwd = process.cwd();
     const jsonFile1 = fs.readFileSync(cwd + "/wallet1.json", 'utf8');
     const wallet1 = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile1.toString())));
@@ -193,6 +194,7 @@ import { Keypair } from '@solana/web3.js'
 import fs from 'fs'
 
 async function main() {
+    // your JSON wallet
     const cwd = process.cwd();
     const jsonFile1 = fs.readFileSync(cwd + "/wallet1.json", 'utf8');
     const wallet1 = Keypair.fromSecretKey(new Uint8Array(JSON.parse(jsonFile1.toString())));
