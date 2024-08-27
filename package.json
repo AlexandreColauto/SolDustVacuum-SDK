@@ -1,13 +1,13 @@
 {
   "name": "sol-dust-vacuum-sdk",
-  "version": "0.0.102",
+  "version": "0.0.103",
   "description": "Package to interect programatically with https://soldustvacuum.app.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexandreColauto/SolDustVacuum-SDKhttps://github.com/AlexandreColauto/SolDustVacuum-SDK"
+    "url": "https://github.com/AlexandreColauto/SolDustVacuum-SDK"
   },
   "scripts": {
     "build": "tsup",
